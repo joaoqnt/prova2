@@ -1,0 +1,78 @@
+# Pacote
+#---------------------------
+
+###
+GET /pacotes
+Host: localhost:8080
+
+###
+POST /pacotes
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"idUnico": "XYZ9876543",
+	"destinatario": "Ana Clara Souza",
+	"endereco": {
+		"id": 2
+	},
+	"status": "preparando para envio"
+}
+
+###
+GET /pacotes/5
+Host: localhost:8080
+
+###
+PUT /pacotes/3
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"status": "entregue"
+}	 
+
+###
+PUT /pacotes/4
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"status": "cancelado"
+}	 
+
+###
+DELETE /pacotes/5
+Host: localhost:8080
+
+
+# Rastreamento
+#----------------------------------------------------
+
+###
+GET /rastreamentos/2
+Host: localhost:8080
+
+
+# Endereco
+#--------------------------------------------------------
+###
+GET /enderecos
+Host: localhost:8080
+
+###
+GET /enderecos/8
+Host: localhost:8080
+
+###
+POST /enderecos
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"rua": "Avenida Paulista",
+	"numero": 1500,
+	"cidade": "Rio de Janeiro",
+	"estado": "RJ",
+	"cep": "20000-000"
+}
